@@ -15,7 +15,7 @@ import entities.Document;
 import entities.Transaction;
 import entities.Utilisateur;
 
-public interface BanqueDaoInterface {
+public interface IgestiBankDao {
 
 		// Management des utilisateurs
 		public abstract Utilisateur updateUtilisateur(long codeuser);
