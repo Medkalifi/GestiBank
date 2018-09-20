@@ -2,6 +2,7 @@ package dao;
 
 import java.util.List;
 
+
 import entities.Administrateur;
 import entities.Agent;
 import entities.Client;
@@ -11,35 +12,23 @@ import entities.Utilisateur;
 public interface IgestiBankDao {
 	
 	
-	/*public Utilisateur addUser(Utilisateur ut);
-	public Administrateur addAdmin(Administrateur ad);
-	public Agent addAgent(Agent ag, Long CodeAd);
-	
-	public void addClientToAgent (Long codeCL);
-	public List<Operation>> consulterOperations(String codeCpte, int position, int nbOp);
-	
-	public long getNombreOperations(String codeCpte);
-	public Client consulterClient(Long codeCli);
-	public List<Client> consulterClients(String mc);
-	public List<Compte> getComptesParClient(Long codeCli);
-	public List<Compte> getComptesParAgent(Long codeEmp);
-	public List<Agent> getAgents();
+	// Management des utilisateurs
+		public abstract Utilisateur updateUtilisateur(Utilisateur codeuser);
+		public abstract Utilisateur ajouterUtilisateur(Utilisateur codeuser);
+		public abstract Utilisateur getUtilisateur(long codeuser);
+		public List<Utilisateur> findAllUtilisateur();
+		
+		// Création d'un compte par le client
+		public Client ajouterNewClient(Client code_client);
+		
+		// Management des clients par l'agent
+		public Client ajouterClient(Client client);
+		public Client miseAjourClient(Client client);
+		public Client consulterClient(Long codeClient);
+		public Boolean supprimerClient(Client codeClient);
 
-	*/
-	
-	//ajouter Client
-	public Client addClient( Client cl);
-	public void updateClient( Long idC );
-	public List<Client> consulterClients(Long idCl );
-	public boolean supprClient( Long idCl);
-	
-	public void addCompte( Compte cp);
-	public Compte updateCompte( Long  idC);
-	public List<Compte> consulterCopmptes(Long idC );
-	public boolean supprCompte( Long idC);
-	
-	
-	
-	
+		
+		
+		
 
 }
