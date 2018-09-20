@@ -31,7 +31,7 @@ public List<Transaction> consulterTransaction(String codeCpte, int nbOp);
 	public Compte ajouterCompte(Compte cp,Long codeCli, Long codeAg);
 	public Compte consulterCompte(String codeCpte);
 	public Compte supprimerCompte(String codeCpte, Long codeAg);
-	
+	public Compte verifierDecouvert(String codeCpte);
 	
 	/*transaction*/
 	public void verser(double mt,String cpte,Long codeAg);
@@ -56,6 +56,7 @@ public List<Transaction> consulterTransaction(String codeCpte, int nbOp);
 	public List<Agent> getAgent();
 	public List<Compte> getComptesParClient(Long codeCli);
 	public List<Compte> getComptesParAgent(Long codeAg);
+	
 	
 }
 
