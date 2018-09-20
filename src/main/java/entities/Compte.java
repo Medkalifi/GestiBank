@@ -31,6 +31,7 @@ public  class Compte implements Serializable{
 	private String rib;
 	private Date dateCreation;
 	private double montant;
+	protected double mtDecouvert;
 	private double solde;
 	
 	
@@ -47,6 +48,9 @@ public  class Compte implements Serializable{
 	
 	@Transient
 	private Collection<Transaction> transactions;
+	
+	public Double getMtDecouvert() {return mtDecouvert;}
+	public void setMtDecouvert(Double mtDecouvert) {this.mtDecouvert = mtDecouvert;}
 
 	public Client getClient() {	return client;}
 

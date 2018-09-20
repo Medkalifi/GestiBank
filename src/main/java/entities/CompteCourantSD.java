@@ -17,7 +17,7 @@ public class CompteCourantSD extends Compte{
 		
 	}
 
-	
+	public Double getMtDecouvert() {return mtDecouvert=0;}
 	
 	
 	

@@ -19,7 +19,7 @@ public interface IgestiBankDao {
 
 		// Management des utilisateurs
 		
-		public Utilisateur ajouterUtilisateur(long codeuser);
+		public Utilisateur ajouterUtilisateur(Utilisateur codeuser);
 		public  Utilisateur updateUtilisateur(long codeuser);
 		public Utilisateur getUtilisateur(long codeuser);
 		public List<Utilisateur> findAllUtilisateur();
@@ -51,6 +51,8 @@ public interface IgestiBankDao {
 		public List<Client> consulterClients(Client client);
 		public List<Client> findAllClients();
 		
+		// Demande
+		
 		
 		// Gestion des demandes en attente
 		public Demande ajouterDemande(Demande ajouter_demande);
@@ -61,7 +63,6 @@ public interface IgestiBankDao {
 		public List<Demande> getDemandeAffectDate(Demande Date_Affect_demande);
 		public List<Demande> getDemandeByUser(Long codeuser);
 		
-		//////
 		
 		// Gestion des documents
 		public List<Document> findAllDoc();

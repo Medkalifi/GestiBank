@@ -18,7 +18,8 @@ public class CompteRemunere extends Compte{
 	public double getTauxRenumeration() {return tauxRenumeration;}
 	public void setTauxRenumeration(double tauxRenumeration) {this.tauxRenumeration = tauxRenumeration;	}
 	
-		
+	public Double getMtDecouvert() {return mtDecouvert=0;}
+	
 	
 	
 	
