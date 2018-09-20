@@ -1,12 +1,15 @@
 package dao;
 
+import javax.persistence.PersistenceContext;
+
 import entities.Client;
 import entities.Compte;
 
-
+//
+@Repository
 public class ICompteDAOimp implements 	ICompteDAO, IgestiBankDao {
 
-	
+@PersistenceContext	
 private IgestiBankDao dao;
 	
 	

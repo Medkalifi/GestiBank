@@ -2,7 +2,7 @@ package dao;
 
 import entities.Compte;
 
-public interface ICompteDAO {
+public interface ICompteDAO { //
 	/*comptes*/
 	public Compte ajouterCompte(Compte cp,Long codeCli, Long codeAg);
 	public Compte consulterCompte(String codeCpte);
