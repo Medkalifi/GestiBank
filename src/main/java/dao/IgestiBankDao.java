@@ -60,7 +60,7 @@ public interface IgestiBankDao {
 		public List<Demande> getDemandeAffectDate(Demande Date_Affect_demande);
 		public List<Demande> getDemandeByUser(Long codeuser);
 		
-		////
+		//////
 		
 		// Gestion des documents
 		public List<Document> findAllDoc();
