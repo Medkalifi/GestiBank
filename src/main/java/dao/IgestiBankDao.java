@@ -4,7 +4,7 @@ import java.util.List;
 
 import javax.management.Notification;
 
-import com.mysql.cj.protocol.Message;
+//import com.mysql.cj.protocol.Message;
 
 import entities.Administrateur;
 import entities.Agent;
@@ -18,8 +18,9 @@ import entities.Utilisateur;
 public interface IgestiBankDao {
 
 		// Management des utilisateurs
-		public abstract Utilisateur updateUtilisateur(long codeuser);
+		
 		public Utilisateur ajouterUtilisateur(long codeuser);
+		public  Utilisateur updateUtilisateur(long codeuser);
 		public Utilisateur getUtilisateur(long codeuser);
 		public List<Utilisateur> findAllUtilisateur();
 		
@@ -73,27 +74,13 @@ public interface IgestiBankDao {
 	  	public Notification ajouterNotification(Notification notif);
 	  	public List<Notification> getNotificationsByDestinateur(long idUser);
 	  	
-	  	//Messages refus nouveau compte
-	  	
-	  	public Message ajouterMessage(Message message);
+	  
 	  	
 	  	
 	  	
 		
 
-	  	//Compte et transaction
-	  	
-		
-		public void miseAjourCompte(Compte cpte);
-		public void saveCompte(Compte cpte);
-		public Compte ajouterCompte(Compte c,Long numCli);
-		public Transaction ajouterOperation(Transaction op,String numCpte);
-		public Compte consulterCompte(String numCpte);
-		public List<Transaction> consulterOperations(String codeCompte,int position,int nboperation);
-		public List<Compte> getComptesByClient(long codeCli);
-		public List<Compte> getComptesByConseiller(long codeConseil);
-		public int getNombreOperation(String numCpte);
-		
+	  
 		
 		
 		
