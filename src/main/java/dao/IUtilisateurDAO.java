@@ -12,7 +12,7 @@ public interface IUtilisateurDAO {
 	
 	// Management des utilisateurs
 	
-			public Utilisateur ajouterUtilisateur(long codeuser);
+			public Utilisateur ajouterUtilisateur(Utilisateur codeuser);
 			public  Utilisateur updateUtilisateur(long codeuser);
 			public Utilisateur getUtilisateur(long codeuser);
 			public List<Utilisateur> findAllUtilisateur();

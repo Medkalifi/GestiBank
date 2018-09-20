@@ -23,16 +23,16 @@ public class UtilisateurImpl implements IUtilisateurDAO{
 	/// Management des utilisateurs
 	
 	@Override
-	public Utilisateur ajouterUtilisateur(long codeuser) {
+	public Utilisateur ajouterUtilisateur(Utilisateur codeuser) {
 		em.persist(codeuser);
-		return ajouterUtilisateur(0);
+		return codeuser;
+		
 	}
 			
 	
 	@Override
 	public Utilisateur getUtilisateur(long codeuser) {
-		em.persist(codeuser);
-		return getUtilisateur(codeuser);
+		return em.find(Utilisateur.class, codeuser);
 	}
 		
 	
@@ -46,19 +46,15 @@ public class UtilisateurImpl implements IUtilisateurDAO{
 	// Création d'un compte par le client
 	
 	@Override
-	public Client ajouterNewClient(Long code_client) {
-		em.persist(code_client);
-		return ajouterNewClient(code_client);
+	public Client ajouterClient(Client client) {
+		em.persist(Client.class);
+		return client;
 	}
 	
 	
 	// Management des clients par l'agent
 	
-	@Override
-	public Client ajouterClient(Client client) {
-		em.persist(Client.class);
-		return ajouterClient(client);
-	}
+	
 	
 	@Override
 	public Client miseAjourClient(Client client)  {
@@ -76,16 +72,17 @@ public class UtilisateurImpl implements IUtilisateurDAO{
 	
 	
 	@Override
-	public Client consulterClient(Long code_lient)  {
-		Query req=(Query) em.createQuery("select c from Client");
-		return consulterClient(code_lient);
+	public Client consulterClient(Long code_client)  {
+		Client c=em.find(Client.class, code_client);
+		if(c==null) throw new RuntimeException("Client INTROUVABLE");
+		return c;
 	}
 	
 	
 	public Boolean supprimerClient(Long code_lient)  {
 		if (code_lient != null)
             em.remove(code_lient);
-		return null;
+		return true;
 	}
 
 	@Override
