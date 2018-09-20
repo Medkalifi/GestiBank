@@ -18,12 +18,14 @@ public interface IDemandeDAO {
 				public List<Demande> getDemandeByUser(Long codeuser);
 				
 				/*demande*/
-				public void demanderChequier(String cpte);
-				public void CreationCompte(String cpte);
-				public void validerDemande(Long codecpte);
+			
+				
+			
 				public DemandeMdp ChangementMdp(String Mdp, String cpte);
 				public  List<Document> AjouterDocument(String cpte);
 				public List<Demande> getDemandesAffectes(Long idAg);
+			
+				
 				
 	
 }
