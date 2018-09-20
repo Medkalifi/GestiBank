@@ -16,6 +16,7 @@
 		<class>entities.Credit</class>
 		<class>entities.Debit</class>
 		<class>entities.Virement</class>
+			<class>entities.Notification</class>
 		
 		
 		<class>entities.Demande</class>
@@ -23,6 +24,7 @@
 		<class>entities.DemandeCheque</class>
 		<class>entities.DemandeMdp</class>
 		<class>entities.Document</class>
+		
 		
 		
 		
