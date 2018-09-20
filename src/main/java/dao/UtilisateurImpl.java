@@ -20,7 +20,7 @@ public class UtilisateurImpl implements IUtilisateurDAO{
 	
 	private EntityManager em;
 	
-	// Management des utilisateurs
+	/// Management des utilisateurs
 	
 	@Override
 	public Utilisateur ajouterUtilisateur(long codeuser) {
