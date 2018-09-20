@@ -4,7 +4,7 @@ import entities.Client;
 import entities.Compte;
 
 
-public class ICompteDAOimp implements 	ICompteDAO {
+public class ICompteDAOimp implements 	ICompteDAO, IgestiBankDao {
 
 	
 private IgestiBankDao dao;
