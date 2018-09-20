@@ -12,7 +12,7 @@ import entities.Utilisateur;
 public interface IgestiBankDao {
 	
 	
-	// Management des utilisateurs
+		// Management des utilisateurs
 		public abstract Utilisateur updateUtilisateur(Utilisateur codeuser);
 		public abstract Utilisateur ajouterUtilisateur(Utilisateur codeuser);
 		public abstract Utilisateur getUtilisateur(long codeuser);
