@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.0" xmlns="http://java.sun.com/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd">
+	<persistence-unit name="banqueProject" transaction-type="RESOURCE_LOCAL">
+		
+		<class>entities.Utilisateur</class>
+		<class>entities.Administrateur</class>
+		<class>entities.Agent</class>
+		<class>entities.Client</class>
+		
+        <class>entities.Compte</class>
+        <class>entities.CompteCourantAD</class>
+        <class>entities.CompteCourantSD</class>
+        <class>entities.CompteRemunere</class>
+        
+        <class>entities.Transaction</class>
+		<class>entities.Credit</class>
+		<class>entities.Debit</class>
+		<class>entities.Virement</class>
+		
+		
+		<class>entities.Demande</class>
+		<class>entities.CreationCompte</class>
+		<class>entities.DemandeCheque</class>
+		<class>entities.DemandeMdp</class>
+		<class>entities.Document</class>
+		
+		
+		
+		
+		<properties>
+			<property name="eclipselink.jdbc.batch-writing" value="JDBC"/>
+			<property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/banquegesti"/>
+			<property name="javax.persistence.jdbc.user" value="root"/>
+			<property name="javax.persistence.jdbc.password" value=""/>
+			<property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver"/>
+			 <property name="hibernate.hbm2ddl.auto" value="create"/>
+			
+		</properties>
+	</persistence-unit>
+</persistence>
