@@ -1,6 +1,8 @@
 package entities;
 
 
+import java.util.Date;
+
 import javax.persistence.DiscriminatorValue;
 import javax.persistence.Entity;
 @Entity
@@ -24,6 +26,13 @@ public CompteCourantAD() {
 	
 	
 }
+
+public CompteCourantAD(String rib, Date dateCreation, double solde, Double mtDecouvert) {
+	super(rib, dateCreation, solde);
+	MtDecouvert = mtDecouvert;
+}
+
+
 
 
 

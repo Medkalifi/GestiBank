@@ -7,6 +7,7 @@ import java.util.Date;
 import javax.persistence.DiscriminatorColumn;
 import javax.persistence.DiscriminatorType;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Inheritance;
 import javax.persistence.InheritanceType;
@@ -25,11 +26,12 @@ public  class Compte implements Serializable{
 	 */
 	private static final long serialVersionUID = 1L;
 	@Id
+	@GeneratedValue
 	private Long idC;
 	private String rib;
 	private Date dateCreation;
 	private double montant;
-	private double montantDecouvert;
+	private double solde;
 	
 	
 	private double debit;
@@ -58,9 +60,7 @@ public  class Compte implements Serializable{
 
 	public void setMontant(double montant) {this.montant = montant;	}
 
-	public double getMontantDecouvert() {return montantDecouvert;	}
-
-	public void setMontantDecouvert(double montantDecouvert) {this.montantDecouvert = montantDecouvert;	}
+	
 	
 	public String getRib() {return rib;	}
 
@@ -81,12 +81,14 @@ public  class Compte implements Serializable{
 
 	
 
-	public Compte(String rib, Date dateCreation, double montant, double montantDecouvert) {
+	
+	
+
+	public Compte(String rib, Date dateCreation, double solde) {
 		super();
 		this.rib = rib;
 		this.dateCreation = dateCreation;
-		this.montant = montant;
-		this.montantDecouvert = montantDecouvert;
+		this.solde = solde;
 	}
 
 	public Long getIdC() {
@@ -111,6 +113,14 @@ public  class Compte implements Serializable{
 
 	public void setTransactions(Collection<Transaction> transactions) {
 		this.transactions = transactions;
+	}
+
+	public double getSolde() {
+		return solde;
+	}
+
+	public void setSolde(double solde) {
+		this.solde = solde;
 	}
 	
 }

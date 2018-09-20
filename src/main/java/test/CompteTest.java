@@ -10,6 +10,7 @@ import entities.Administrateur;
 import entities.Agent;
 import entities.Client;
 import entities.Compte;
+import entities.CompteCourantAD;
 import entities.Utilisateur;
 
 public class CompteTest {
@@ -20,18 +21,19 @@ public class CompteTest {
 		
 		
 				Compte cp= new Compte("rib2014", dt, 2000.01, 100);
-				Administrateur admin = new Administrateur();
-				Client client =new Client("kalifi", "moha", "1234", "kalifi@hotmail.fr", "21 rue curie", "06105487", "M", 2, 0.00);
-				Agent agent = new Agent("conseiller1", "paul", "poau", "lloaj@gdd.fr", "5 rue de la rue");
-				
+				CompteCourantAD cad= new CompteCourantAD("ribCAD0214",dt, 100, 1000.23,100);
 				
 				
 				EntityManagerFactory emf =Persistence.createEntityManagerFactory("banqueProject" );
 				EntityManager em = emf.createEntityManager();
 				em.getTransaction().begin();
-				em.persist(client);
+				em.persist(cp);
 				em.getTransaction().commit();
 				em.close();
 	}
+	
+	
+	
+
 
 }
