@@ -138,6 +138,55 @@ public class GestiBankDaoIMPL implements IgestiBankDao{
 		agent.getListClient().add(c);
 		c.setAgent(agent);	
 	}
+
+
+	@Override
+	public Utilisateur updateUtilisateur(long codeuser) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+
+	@Override
+	public Client ajouterNewClient(Long code_client) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+
+	@Override
+	public List<Agent> getAgentByGroupe(Administrateur groupe_agent) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+
+	@Override
+	public List<Agent> getAgent(Administrateur agent) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+
+	@Override
+	public List<Demande> getDemandes(Administrateur Demande) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+
+	@Override
+	public List<Client> consulterClients(Client client) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+
+	@Override
+	public List<Client> findAllClients() {
+		// TODO Auto-generated method stub
+		return null;
+	}
 }
 	
 	
