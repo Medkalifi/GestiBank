@@ -16,7 +16,7 @@
 		<class>entities.Credit</class>
 		<class>entities.Debit</class>
 		<class>entities.Virement</class>
-			<class>entities.Notification</class>
+		<class>entities.Notifications</class>
 		
 		
 		<class>entities.Demande</class>
