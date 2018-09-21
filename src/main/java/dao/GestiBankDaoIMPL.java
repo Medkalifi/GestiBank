@@ -3,11 +3,12 @@ package dao;
 import java.util.Date;
 import java.util.List;
 
+import javax.management.Notification;
 import javax.persistence.EntityManager;
+import javax.persistence.TypedQuery;
 
 import com.mysql.cj.Query;
-
-
+import com.mysql.cj.protocol.Resultset.Type;
 
 import entities.Administrateur;
 import entities.Agent;
@@ -21,7 +22,7 @@ import entities.Document;
 import entities.Transaction;
 import entities.Utilisateur;
 
-public class UtilisateurImpl implements IUtilisateurDAO{
+public class GestiBankDaoIMPL implements IgestiBankDao{
 
 	
 	private EntityManager em;
@@ -137,68 +138,8 @@ public class UtilisateurImpl implements IUtilisateurDAO{
 		agent.getListClient().add(c);
 		c.setAgent(agent);	
 	}
-	
-	
-	
-	//Demande
-	
-	public void setDao(IgestiBankDao dao) {
-		this. = dao;
-	}
-	
-	@Override
-	public Demande ajouterDemande(Demande ajouter_demande) {
-		return  dao.ajouterDemande( ajouter_demande);
-	}
-
-	@Override
-	public List<Demande> getDemande(Demande demande) {
-		return dao.getDemande(demande);
-	}
-
-	@Override
-	public List<Demande> getDemandesAffect(Demande affect_demande) {
-		return dao.getDemandesAffect(affect_demande);
-	}
-
-	@Override
-	public List<Demande> getDemandeStatut(Demande statut_demande) {
-		return dao.getDemandeStatut(statut_demande);
-	}
-
-	@Override
-	public List<Demande> getDemandeDate(Demande Date_demande) {
-		return dao.getDemandeDate(Date_demande);
-	}
-
-	@Override
-	public List<Demande> getDemandeAffectDate(Demande Date_Affect_demande) { 
-		return dao.getDemandeAffectDate(Date_Affect_demande);
-	}
-
-	@Override
-	public List<Demande> getDemandeByUser(Long codeuser) {
-		return dao.getDemandeByUser(codeuser);
-	}
-
-
-	@Override
-	public DemandeMdp ChangementMdp(String Mdp, String cpte) {
-		return dao.getChangementMdp(Mdp);
-	}
-
-	@Override
-	public List<Document> AjouterDocument(String cpte) {
-		return dao.AjouterDocument(cpte);
-	}
-
-	@Override
-	public List<Demande> getDemandesAffectes(Long idAg) {
-		return dao.getDemandesAffectes(idAg);
-	}
-
 }
 	
-}
+	
 
 	

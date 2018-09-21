@@ -1,5 +1,6 @@
 package dao;
 
+import java.util.Date;
 import java.util.List;
 
 import javax.management.Notification;
@@ -51,29 +52,9 @@ public interface IgestiBankDao {
 		public List<Client> consulterClients(Client client);
 		public List<Client> findAllClients();
 		
-		// Demande
 		
 		
-		// Gestion des demandes en attente
-		public Demande ajouterDemande(Demande ajouter_demande);
-		public List<Demande> getDemande(Demande demande);
-		public List<Demande> getDemandesAffect(Demande affect_demande);
-		public List<Demande> getDemandeStatut(Demande statut_demande);
-		public List<Demande> getDemandeDate(Demande Date_demande);
-		public List<Demande> getDemandeAffectDate(Demande Date_Affect_demande);
-		public List<Demande> getDemandeByUser(Long codeuser);
 		
-		
-		// Gestion des documents
-		public List<Document> findAllDoc();
-		public Document findDocById(int id);
-		public void saveDoc(Document document);
-		public List<Document> findAllDocByUserId(long userId);
-	    public void deleteDocById(int id);
-	      
-	    //Notification
-	  	public Notification ajouterNotification(Notification notif);
-	  	public List<Notification> getNotificationsByDestinateur(long idUser);
 	  	
 	  
 	  	

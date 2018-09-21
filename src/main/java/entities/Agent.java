@@ -8,7 +8,7 @@ import javax.persistence.Transient;
 @Entity
 @DiscriminatorValue("AGENT")
 public class Agent extends Utilisateur{
-/
+
 	/**
 	 * 
 	 */

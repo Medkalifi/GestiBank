@@ -1,6 +1,7 @@
 package entities;
 
 import java.util.Date;
+import java.util.List;
 
 import javax.persistence.DiscriminatorValue;
 import javax.persistence.Entity;
@@ -12,10 +13,11 @@ import javax.persistence.Id;
 
 @Entity
 @DiscriminatorValue("Notif")
-public class Notification {
+public class Notifications {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
+	private long codeuser;
 	private Long idNotification;
 	private Date dateNotification; 
 	private String libelle;
@@ -23,12 +25,14 @@ public class Notification {
 	private Transaction transaction;
 	
 	
-	public Notification() {
+	
+	public Notifications() {
 	
 	}
-	public Notification(Long idNotification, Date dateNotification, String libelle, Demande demande,
-			Transaction transaction) {
+	public Notifications(Long idNotification, Date dateNotification, String libelle, Demande demande,
+			Transaction transaction, Long codeuser) {
 		super();
+		this.codeuser = codeuser;
 		this.idNotification = idNotification;
 		this.dateNotification = dateNotification;
 		this.libelle = libelle;
@@ -75,6 +79,7 @@ public class Notification {
 	public void setTransaction(Transaction transaction) {
 		this.transaction = transaction;
 	}
+	
 	
 	
 

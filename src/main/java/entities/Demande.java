@@ -18,6 +18,8 @@ public  class Demande {
 	@Id
 	private Long numDemande;
 	private Date DateDemande;
+	private Date DateAffectation;
+	private String Statut;
 	@ManyToOne
 	@JoinColumn(name="DEM_CLI")
 	private Client client;
@@ -28,14 +30,18 @@ public  class Demande {
 	
 	
 	
+	
 	public Demande() {
 		super();
 		
 	}
-	public Demande(Date dateDemande) {
+	public Demande(Date dateDemande,String statut) {
 		super();
-		DateDemande = dateDemande;
+		DateDemande = new Date();
+		this.Statut = statut;
+		
 	}
+	
 	public Long getNumDemande() {
 		return numDemande;
 	}
@@ -56,7 +62,22 @@ public  class Demande {
 	}
 	
 	public Date getDateDemande() {return DateDemande;}
+	
 	public void setDateDemande(Date dateDemande) {DateDemande = dateDemande;	}
+	
+	public Date getDateAffectation() {
+		this.DateAffectation = getDateDemande();
+		return DateAffectation;
+	}
+	public void setDateAffectation(Date dateAffectation) {
+		DateAffectation = dateAffectation;
+	}
+	public String getStatut() {
+		return Statut;
+	}
+	public void setStatut(String statut) {
+		Statut = statut;
+	}
 	
 	
 		
